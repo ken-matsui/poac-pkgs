@@ -1,0 +1,21 @@
+[package]
+name = "boost/mpl"
+version = "1.66.0"
+cpp = 3
+authors = ["Ken Matsui <26405363+matken11235@users.noreply.github.com>"]
+license = "BSL-1.0"
+repository = "https://github.com/boostorg/mpl"
+documentation = "http://boost.org/libs/mpl"
+readme = "README.md"
+description = """
+Boost.org mpl module
+"""
+
+[dependencies]
+"boost/config" = "1.66.0"
+"boost-core" = "1.66.0"
+"boost-predef" = "1.66.0"
+"boost-preprocessor" = "1.66.0"
+"boost-static_assert" = "1.63.0"
+"boost-type_traits" = "1.65.0"
+"boost-utility" = "1.66.0"
