@@ -1,0 +1,21 @@
+[package]
+name = "boost/utility"
+version = "1.66.0"
+cpp = 11
+authors = ["Ken Matsui <26405363+matken11235@users.noreply.github.com>"]
+repository = "https://github.com/boostorg/utility"
+documentation = "http://boost.org/libs/utility"
+readme = "README.md"
+description = """
+Boost.org utility module
+"""
+
+[dependencies]
+"boost/config" = "1.66.0"
+"boost/core" = "1.66.0"
+"boost/iterator" = "1.66.0"
+"boost/mpl" = "1.66.0"
+"boost/preprocessor" = "1.66.0"
+"boost/static_assert" = "1.63.0"
+"boost/throw_exception" = "1.63.0"
+"boost/type_traits" = "1.65.0"
