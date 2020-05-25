@@ -1,0 +1,19 @@
+[package]
+name = "boost/concept_check"
+version = "1.66.0"
+cpp = 03
+authors = ["Ken Matsui <26405363+matken11235@users.noreply.github.com>"]
+license = "BSL-1.0"
+repository = "https://github.com/boostorg/concept_check"
+documentation = "http://boost.org/libs/concept_check"
+readme = "README.md"
+description = """
+Boost.org concept_check module
+"""
+
+[dependencies]
+"boost/config" = "1.66.0"
+"boost/core" = "1.66.0"
+"boost/mpl" = "1.66.0"
+"boost/preprocessor" = "1.66.0"
+"boost/type_traits" = "1.65.0"
