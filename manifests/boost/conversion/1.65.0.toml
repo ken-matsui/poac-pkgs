@@ -1,0 +1,19 @@
+[package]
+name = "boost/conversion"
+version = "1.65.0"
+cpp = 11
+authors = ["Ken Matsui <26405363+matken11235@users.noreply.github.com>"]
+repository = "https://github.com/boostorg/conversion"
+documentation = "http://boost.org/libs/conversion"
+readme = "README.md"
+description = """
+Boost.org conversion module
+"""
+
+[dependencies]
+"boost/assert" = "1.66.0"
+"boost/config" = "1.66.0"
+"boost/smart_ptr" = "1.66.0"
+"boost/throw_exception" = "1.63.0"
+"boost/type_traits" = "1.65.0"
+"boost/typeof" = "1.66.0"
