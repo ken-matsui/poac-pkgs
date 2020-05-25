@@ -5,7 +5,7 @@ cpp = 11
 authors = ["Ken Matsui <26405363+matken11235@users.noreply.github.com>"]
 license = "BSL-1.0"
 repository = "https://github.com/boostorg/callable_traits"
-documentation = "http://www.boost.org/doc/libs/develop/libs/callable_traits/doc/html/index.html"
+documentation = "http://boost.org/libs/callable_traits"
 readme = "README.md"
 description = """
 modern C++ type traits and metafunctions for callable types
