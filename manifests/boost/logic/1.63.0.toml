@@ -1,0 +1,16 @@
+[package]
+name = "boost/logic"
+version = "1.63.0"
+cpp = 11
+authors = ["Ken Matsui <26405363+matken11235@users.noreply.github.com>"]
+license = "BSL-1.0"
+repository = "https://github.com/boostorg/logic"
+documentation = "http://boost.org/libs/logic"
+readme = "README.md"
+description = """
+Boost.org logic module
+"""
+
+[dependencies]
+"boost/config" = "1.66.0"
+"boost/core" = "1.66.0"
