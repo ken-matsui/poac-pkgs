@@ -1,1 +1,17 @@
-
+[package]
+name = "boost/callable_traits"
+version = "2.3.2"
+cpp = 11
+authors = ["badair <badair@harding.edu>",
+           "Peter Dimov <pdimov@pdimov.com>",
+           "Louis Dionne <ldionne.2@gmail.com>",
+           "Bruno Dutra <brunocodutra@users.noreply.github.com>",
+           "Daniel James <daniel@calamity.org.uk>",
+           "Andrey Semashev <andrey.semashev@gmail.com>"]
+license = "BSL-1.0"
+repository = "https://github.com/boostorg/callable_traits"
+documentation = "http://www.boost.org/doc/libs/develop/libs/callable_traits/doc/html/index.html"
+readme = "README.md"
+description = """
+modern C++ type traits and metafunctions for callable types
+"""
