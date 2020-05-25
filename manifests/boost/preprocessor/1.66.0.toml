@@ -1,0 +1,10 @@
+[package]
+name = "boost/preprocessor"
+version = "1.66.0"
+cpp = 11
+authors = ["Ken Matsui <26405363+matken11235@users.noreply.github.com>"]
+repository = "https://github.com/boostorg/preprocessor"
+documentation = "http://boost.org/libs/preprocessor"
+description = """
+Boost.org preprocessor module
+"""
