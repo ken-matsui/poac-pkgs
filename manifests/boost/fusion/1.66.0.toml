@@ -1,0 +1,23 @@
+[package]
+name = "boost/fusion"
+version = "1.66.0"
+cpp = 11
+authors = ["Ken Matsui <26405363+matken11235@users.noreply.github.com>"]
+repository = "https://github.com/boostorg/fusion"
+documentation = "http://boost.org/libs/fusion"
+description = """
+Boost.org fusion module
+"""
+
+[dependencies]
+"boost/config" = "1.66.0"
+"boost/core" = "1.66.0"
+"boost/function_types" = "1.66.0"
+"boost/functional" = "1.66.0"
+"boost/mpl" = "1.66.0"
+"boost/preprocessor" = "1.66.0"
+"boost/static_assert" = "1.63.0"
+"boost/tuple" = "1.66.0"
+"boost/type_traits" = "1.65.0"
+"boost/typeof" = "1.66.0"
+"boost/utility" = "1.66.0"
