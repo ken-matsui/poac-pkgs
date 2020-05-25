@@ -1,0 +1,16 @@
+[package]
+name = "boost/type_traits"
+version = "1.66.0"
+cpp = 11
+authors = ["Ken Matsui <26405363+matken11235@users.noreply.github.com>"]
+repository = "https://github.com/boostorg/type_traits"
+documentation = "http://boost.org/libs/type_traits"
+readme = "README.md"
+description = """
+Boost.org type_traits module
+"""
+
+[dependencies]
+"boost/config" = "1.66.0"
+"boost/core" = "1.66.0"
+"boost/static_assert" = "1.63.0"
