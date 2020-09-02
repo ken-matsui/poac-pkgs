@@ -1,0 +1,29 @@
+name: Algolia
+
+on:
+  push:
+    paths:
+    - '**.toml'
+
+jobs:
+  add:
+    runs-on: macOS-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - uses: actions/checkout@v2
+      - run: brew install remarshal
+      - uses: lots0logs/gh-action-get-changed-files@2.1.4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: Check changed files
+        run: |
+          declare -a FILES_ADDED=($(python3 -c "import os, json; print(' '.join([p for p in json.load(open('${HOME}/files.json', 'r'))]))"))
+          for ((i = 0; i < ${#FILES_ADDED[@]}; i++)) {
+            echo "[$(toml2json -i ${FILES_ADDED[i]})]" > tmp.json
+            npx @algolia/cli import -s tmp.json -a ${{ secrets.ALGOLIA_APP_ID }} -k ${{ secrets.ALGOLIA_API_KEY }} -n packages
+            rm -f tmp.json
+          }
