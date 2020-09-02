@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
-      - name: Check changed files
+      - name: Upload package information to Algolia
         run: |
           declare -a FILES_ADDED=($(python3 -c "import os, json; print(' '.join([p for p in json.load(open('${HOME}/files_added.json', 'r'))]))"))
           for ((i = 0; i < ${#FILES_ADDED[@]}; i++)) {
