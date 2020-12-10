@@ -1,6 +1,6 @@
 [package]
 name = "boost/concept_check"
-version = "1.66.0"
+version = "1.64.0"
 cpp = 3
 authors = ["Ken Matsui <26405363+matken11235@users.noreply.github.com>"]
 license = "BSL-1.0"
