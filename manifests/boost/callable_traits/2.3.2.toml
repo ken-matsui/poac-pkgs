@@ -2,7 +2,7 @@
 name = "boost/callable_traits"
 version = "2.3.2"
 cpp = 11
-authors = ["Ken Matsui <26405363+matken11235@users.noreply.github.com>"]
+authors = ["Ken Matsui <26405363+ken-matsui@users.noreply.github.com>"]
 license = "BSL-1.0"
 repository = "https://github.com/boostorg/callable_traits"
 documentation = "http://boost.org/libs/callable_traits"

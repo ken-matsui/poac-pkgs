@@ -2,7 +2,7 @@
 name = "boost/mpl"
 version = "1.66.0"
 cpp = 3
-authors = ["Ken Matsui <26405363+matken11235@users.noreply.github.com>"]
+authors = ["Ken Matsui <26405363+ken-matsui@users.noreply.github.com>"]
 license = "BSL-1.0"
 repository = "https://github.com/boostorg/mpl"
 documentation = "http://boost.org/libs/mpl"

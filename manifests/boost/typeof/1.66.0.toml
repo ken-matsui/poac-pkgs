@@ -2,7 +2,7 @@
 name = "boost/typeof"
 version = "1.66.0"
 cpp = 11
-authors = ["Ken Matsui <26405363+matken11235@users.noreply.github.com>"]
+authors = ["Ken Matsui <26405363+ken-matsui@users.noreply.github.com>"]
 repository = "https://github.com/boostorg/typeof"
 documentation = "http://boost.org/libs/typeof"
 description = """
