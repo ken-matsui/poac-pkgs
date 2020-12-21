@@ -16,6 +16,6 @@ Boost.IO
 "boost/core" = "1.66.0"
 "boost/move" = "1.66.0"
 "boost/predef" = "1.66.0"
-"boost/static_assert = "1.63.0"
+"boost/static_assert" = "1.63.0"
 "boost/throw_exception" = "1.63.0"
 "boost/type_traits" = "1.65.0"
