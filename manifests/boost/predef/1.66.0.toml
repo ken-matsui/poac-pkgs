@@ -3,7 +3,7 @@ name = "boost/predef"
 version = "1.66.0"
 cpp = 11
 authors = ["Ken Matsui <26405363+ken-matsui@users.noreply.github.com>"]
-repository = "https://github.com/boostorg/predef"
+repository = "https://github.com/boostorg/predef/tree/boost-1.66.0"
 documentation = "http://boost.org/libs/predef"
 description = """
 Boost.Predef (a Boost C++ Library)
