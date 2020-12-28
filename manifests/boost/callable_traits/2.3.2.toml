@@ -1,7 +1,7 @@
 [package]
 name = "boost/callable_traits"
 version = "2.3.2"
-cpp = 11
+edition = "2011"
 authors = ["Ken Matsui <26405363+ken-matsui@users.noreply.github.com>"]
 license = "BSL-1.0"
 repository = "https://github.com/boostorg/callable_traits/tree/2.3.2"

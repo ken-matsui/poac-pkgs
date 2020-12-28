@@ -1,7 +1,7 @@
 [package]
 name = "boost/tuple"
 version = "1.66.0"
-cpp = 11
+edition = "2011"
 authors = ["Ken Matsui <26405363+ken-matsui@users.noreply.github.com>"]
 repository = "https://github.com/boostorg/tuple/tree/boost-1.66.0"
 documentation = "http://boost.org/libs/tuple"

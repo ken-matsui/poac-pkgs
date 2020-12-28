@@ -15,8 +15,8 @@ jobs:
         key:
           - package.name
           - package.version
-          - package.cpp
           - package.authors
+          - package.edition
           - package.repository
           - package.description
     steps:
