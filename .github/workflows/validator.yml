@@ -1,0 +1,32 @@
+name: Validate Config
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  exists:
+    runs-on: ubuntu-20.04
+    strategy:
+      fail-fast: false
+      matrix:
+        key:
+          - package.name
+          - package.version
+          - package.cpp
+          - package.authors
+          - package.repository
+          - package.description
+    steps:
+      - uses: actions/checkout@v2.3.4
+
+      - uses: actions-rs/install@v0.1
+        with:
+          crate: toml-cli
+
+      - run: |
+          find . -name '*.toml' -type f | \
+          xargs -I {} bash -c \
+          'test "$(toml get {} ${{ matrix.key }})" != "null"'
