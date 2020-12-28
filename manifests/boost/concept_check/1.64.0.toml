@@ -1,7 +1,7 @@
 [package]
 name = "boost/concept_check"
 version = "1.64.0"
-cpp = 3
+edition = "2003"
 authors = ["Ken Matsui <26405363+ken-matsui@users.noreply.github.com>"]
 license = "BSL-1.0"
 repository = "https://github.com/boostorg/concept_check/tree/boost-1.64.0"
