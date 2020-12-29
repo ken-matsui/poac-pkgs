@@ -30,3 +30,17 @@ jobs:
           find . -name '*.toml' -type f | \
           xargs -I {} bash -c \
           'test "$(toml get {} ${{ matrix.key }})" != "null"'
+
+  valid_authors:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2.3.4
+
+      - uses: actions-rs/install@v0.1
+        with:
+          crate: toml-cli
+
+      - run: |
+          find . -name '*.toml' -type f | \
+          xargs -I {} bash -c \
+          'test "$(toml get {} package.authors)" != "[]"'
