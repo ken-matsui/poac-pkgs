@@ -44,3 +44,17 @@ jobs:
           find . -name '*.toml' -type f | \
           xargs -I {} bash -c \
           'test "$(toml get {} package.authors)" != "[]"'
+
+  valid_edition:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2.3.4
+
+      - uses: actions-rs/install@v0.1
+        with:
+          crate: toml-cli
+
+      - run: |
+          find . -name '*.toml' -type f | \
+          xargs -I {} bash -c \
+          '[[ "$(toml get {} package.edition)" =~ ^1998|2003|2011|2014|2017|2020$ ]]'
