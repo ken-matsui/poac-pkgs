@@ -85,4 +85,5 @@ jobs:
       - run: |
           find . -name '*.toml' -type f | \
           xargs -I {} bash -c \
-          'test "$(echo $(toml get {} package.version) | tr -d '\"').toml" = "$(basename {})"'
+          'test "`echo $(toml get {} package.version) | tr -d '\''\"'\''`.toml" = "$(basename {})"'
+        working-directory: manifests
