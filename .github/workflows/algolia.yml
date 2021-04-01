@@ -8,7 +8,7 @@ on:
 jobs:
   add:
     runs-on: macOS-latest
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v2
       - run: brew install remarshal
