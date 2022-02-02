@@ -103,7 +103,7 @@ jobs:
         id: added-file
         run: |
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-            echo "::set-output name=name::$(toml get $file package.name)"
+            echo "::set-output name=name::$file"
             break
           done
 
