@@ -1,13 +1,11 @@
 name: Validate Config
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
     branches: [ main ]
 
 jobs:
-  exists:
+  exist:
     runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
@@ -87,3 +85,57 @@ jobs:
           xargs -I {} bash -c \
           'test "`echo $(toml get {} package.version) | tr -d '\''\"'\''`.toml" = "$(basename {})"'
         working-directory: manifests
+
+  misleading:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2.3.4
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v14.3
+
+      - name: Pick the first change  # FIXME: all changed files
+        id: added-file
+        run: |
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            echo "::set-output name=name::$file"
+            break
+          done
+
+      - name: Check added file is *.toml
+        id: toml-file-check
+        run: |
+          echo "::set-output name=result::$([[ '${{ steps.added-file.outputs.name }}' =~ \.toml$ ]] && echo 'true' || echo 'false')"
+
+      - uses: actions-rs/install@v0.1
+        if: steps.toml-file-check.outputs.result == 'true'
+        with:
+          crate: toml-cli
+
+      - name: Get changed file name
+        if: steps.toml-file-check.outputs.result == 'true'
+        id: added-package
+        run: echo "::set-output name=name::$(toml get ${{ steps.added-file.outputs.name }} package.name)"
+
+      - name: List package names
+        if: steps.toml-file-check.outputs.result == 'true'
+        id: existent-packages
+        run: |
+          LIST=''
+          find . -name '*.toml' -type f | \
+          xargs -I {} bash -c \
+          'LIST="$LIST $(toml get {} package.name)"'
+          echo "::set-output name=list::${LIST//${{ steps.added-package.outputs.name }}/}"
+
+      - uses: ken-matsui/misleading-name-check@v1
+        id: check-misleading
+        if: steps.toml-file-check.outputs.result == 'true'
+        with:
+          name: ${{ steps.added-package.outputs.name }}
+          list: ${{ steps.existent-packages.outputs.list }}
+
+      - name: Test the result
+        if: steps.toml-file-check.outputs.result == 'true'
+        run: |
+          [ '${{ steps.check-misleading.outputs.is-misleading }}' = 'false' ]
