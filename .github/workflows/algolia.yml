@@ -10,7 +10,7 @@ jobs:
     runs-on: macOS-latest
     if: github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: brew install remarshal
       - uses: lots0logs/gh-action-get-changed-files@2.1.4
         with:

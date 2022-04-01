@@ -19,7 +19,7 @@ jobs:
           - package.repository
           - package.description
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3
 
       - uses: actions-rs/install@v0.1
         with:
@@ -33,7 +33,7 @@ jobs:
   valid_authors:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3
 
       - uses: actions-rs/install@v0.1
         with:
@@ -47,7 +47,7 @@ jobs:
   valid_edition:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3
 
       - uses: actions-rs/install@v0.1
         with:
@@ -61,7 +61,7 @@ jobs:
   valid_repository:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3
 
       - uses: actions-rs/install@v0.1
         with:
@@ -75,7 +75,7 @@ jobs:
   version_eq_filename:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3
 
       - uses: actions-rs/install@v0.1
         with:
@@ -90,7 +90,7 @@ jobs:
   misleading:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3
 
       - name: Get changed files
         id: changed-files
